@@ -32,8 +32,6 @@ p { margin: 0 0 1em; }
 
 a { color: var(--accent-dark); }
 
-header .nav li a { color: #333; }
-
 main {
   max-width: 960px;
   margin: 0 auto;
@@ -112,12 +110,12 @@ main {
 .btn:hover { background: var(--accent-dark); }
 
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 24px;
 }
 
 .card {
+  box-sizing: border-box;
   width: 100%;
   padding: 24px;
   background: #fff;
@@ -133,11 +131,12 @@ main {
 
 .menu-grid {
   display: grid;
-  grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 12px 40px;
 }
 
 .item {
+  display: flex;
   align-items: baseline;
   gap: 8px;
   padding: 10px 0;
@@ -191,7 +190,6 @@ main {
   max-width: 960px;
   margin: 0 auto 24px;
   display: flex;
-  flex-direction: column;
   gap: 32px;
 }
 
@@ -207,7 +205,7 @@ main {
 
 /* ---------- Вузькі екрани ---------- */
 
-@media (max-width: 600) {
+@media (max-width: 600px) {
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
@@ -215,6 +213,7 @@ main {
   }
 
   .cards {
+    display: grid;
     grid-template-columns: 1fr;
   }
 
