@@ -131,7 +131,7 @@ main {
 
 .menu-grid {
   display: grid;
-  grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 12px 40px;
 }
 
