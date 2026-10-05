@@ -110,12 +110,12 @@ main {
 .btn:hover { background: var(--accent-dark); }
 
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 24px;
 }
 
 .card {
+  box-sizing: border-box;
   width: 100%;
   padding: 24px;
   background: #fff;
@@ -213,6 +213,7 @@ main {
   }
 
   .cards {
+    display: grid;
     grid-template-columns: 1fr;
   }
 
